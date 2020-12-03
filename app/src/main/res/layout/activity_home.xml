@@ -1,9 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/bgcolorblue"
     android:layout_height="match_parent"
     tools:context=".telas.HomeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:padding="18px"
+                android:layout_marginTop="8px"
+                android:textSize="16sp"
+                android:textColor="@color/bgcolor"
+                android:layout_width="match_parent"
+                android:text="Nenhuma nova notificação"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:padding="18px"
+                android:layout_marginTop="8px"
+                android:textSize="18sp"
+                android:textColor="@color/bgcolor"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:text="VB Desenvolvimentos e Criações"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:padding="18px"
+                android:layout_marginTop="8px"
+                android:textSize="16sp"
+                android:textColor="@color/bgcolor"
+                android:layout_width="match_parent"
+                android:text="Victor Balbino Machado"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:padding="18px"
+                android:layout_marginTop="8px"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:textColor="@color/bgcolor"
+                android:layout_width="match_parent"
+                android:text="Mat. 12.516-914"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/shape"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="800dp">
+
+            <TableRow
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6dp">
+
+                <TextView
+                    android:padding="8dp"
+                    android:text="@string/txt_lista_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="200dp"/>
+
+                <ImageButton
+                    android:foregroundGravity="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="end"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_search"/>
+            </TableRow>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+    android:id="@+id/bottomBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    app:fabAlignmentMode="center"
+    app:fabAnimationMode="scale"
+    android:backgroundTint="@color/bgcolorblue"
+    app:fabCradleRoundedCornerRadius="5dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:background="@android:color/transparent"
+            style="@style/Theme.MaterialComponents.DayNight"
+            android:id="@+id/bottomNavigationView"
+            android:layout_marginRight="16px"
+            android:layout_marginEnd="16px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/app_bar_menu"/>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:backgroundTint="@color/green01"
+        android:tint="@color/white"
+        app:tint="@color/white"
+        app:layout_anchor="@id/bottomBar"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
