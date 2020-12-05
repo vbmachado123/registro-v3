@@ -14,4 +14,13 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="BottomNavigation">
+        <item name="itemIconTint">@color/white</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+        <item name="paddingStart">@dimen/bnbPadding</item>
+        <item name="paddingEnd">@dimen/bnbPadding</item>
+    </style>
+
+    <dimen name="bnbPadding">4dp</dimen>
 </resources>

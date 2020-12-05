@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:padding="8dp"
+            android:padding="@dimen/distancia_padrao"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -34,43 +34,49 @@
                 <TextView
                     android:padding="18px"
                     android:layout_marginTop="8px"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/tamanhoTextoPadrao"
                     android:textColor="@color/bgcolor"
                     android:layout_width="match_parent"
                     android:text="@string/notificacaotxt"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingPrefix" />
             </TableRow>
             <TextView
                 android:id="@+id/txtNomeEmpresa"
                 android:padding="18px"
-                android:layout_marginTop="8px"
-                android:textSize="18sp"
+                android:layout_marginTop="@dimen/distancia_padrao"
+                android:textSize="@dimen/tamanhoTextoDestaque"
                 android:textColor="@color/bgcolor"
                 android:layout_width="match_parent"
                 android:textStyle="bold"
+                fontPath="fonts/montserrat/Montserrat-Bold.ttf"
                 android:text="VB Desenvolvimentos e Criações"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                tools:ignore="MissingPrefix" />
 
             <TextView
                 android:id="@+id/txtNomeColaborador"
                 android:padding="18px"
-                android:layout_marginTop="8px"
-                android:textSize="16sp"
+                android:layout_marginTop="@dimen/distancia_padrao"
+                android:textSize="@dimen/tamanhoTextoDestaque"
                 android:textColor="@color/bgcolor"
                 android:layout_width="match_parent"
                 android:text="Victor Balbino Machado"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                tools:ignore="MissingPrefix" />
 
             <TextView
                 android:id="@+id/txtMatricula"
                 android:padding="18px"
-                android:layout_marginTop="8px"
-                android:textSize="16sp"
+                android:layout_marginTop="@dimen/distancia_padrao"
+                android:textSize="@dimen/tamanhoTextoDestaque"
                 android:textStyle="italic"
                 android:textColor="@color/bgcolor"
                 android:layout_width="match_parent"
                 android:text="Mat. 12.516-914"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                fontPath="fonts/montserrat/Montserrat-LightItalic.ttf"
+                tools:ignore="MissingPrefix"/>
         </LinearLayout>
 
         <LinearLayout
@@ -79,32 +85,36 @@
             android:layout_width="match_parent"
             android:layout_height="800dp">
 
-            <TableRow
-                android:orientation="horizontal"
-                android:gravity="center"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="6dp">
+                android:layout_height="wrap_content">
+
 
                 <TextView
-                    android:padding="8dp"
-                    android:text="@string/txt_lista_home"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
-                <Space
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/distancia_padrao"
+                    android:text="@string/txtUltimosGerados"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
-                    android:id="@+id/btnPesquisar"
-                    android:foregroundGravity="center"
                     android:background="@android:color/transparent"
-                    android:layout_gravity="end"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/imageButton"
                     android:layout_width="wrap_content"
-                    android:src="@drawable/ic_search"/>
-            </TableRow>
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/distancia_padrao"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_search"
+                    tools:ignore="VectorDrawableCompat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvUltimoGeradoId"
@@ -131,7 +141,7 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:background="@android:color/transparent"
-            style="@style/Theme.MaterialComponents.DayNight"
+            style="@style/BottomNavigation"
             android:id="@+id/bottomNavigationView"
             android:layout_marginRight="16px"
             android:layout_marginEnd="16px"

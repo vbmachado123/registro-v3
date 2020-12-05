@@ -4,4 +4,5 @@
     <string name="notificacaotxt">Nenhuma nova notificação</string>
     <string name="txtNomeList">Victor Balbino Machado</string>
     <string name="txtEnderecoList">Rua Dr Jacques Tupinamba</string>
+    <string name="txtUltimosGerados">Ultimos Gerados</string>
 </resources>

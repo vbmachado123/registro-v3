@@ -2,4 +2,7 @@
 <resources>
     <dimen name="tamanhoNomeLista">18sp</dimen>
     <dimen name="tamanhoEndereco">22sp</dimen>
+    <dimen name="distancia_padrao">8dp</dimen>
+    <dimen name="tamanhoTextoPadrao">16sp</dimen>
+    <dimen name="tamanhoTextoDestaque">18sp</dimen>
 </resources>
