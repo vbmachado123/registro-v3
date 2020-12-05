@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">registro</string>
     <string name="txt_lista_home">Últimos Gerados</string>
+    <string name="notificacaotxt">Nenhuma nova notificação</string>
+    <string name="txtNomeList">Victor Balbino Machado</string>
+    <string name="txtEnderecoList">Rua Dr Jacques Tupinamba</string>
 </resources>
