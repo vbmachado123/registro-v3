@@ -1,17 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="purple_200">#FFBB86FC</color>
+    <color name="pink_100">#B35BE9</color>
+    <color name="purple_150">#7D5AE7</color> <!-- PRINCIPAL 3 -->
+    <color name="purple_300">#8029B5</color> <!-- PRINCIPAL 2 -->
+    <color name="purple_100">#454AE9</color> <!-- PRINCIPAL 1 -->
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bgcolor">#F3F3F3</color>
-    <color name="bgcolorblue">#0084CA</color>
+
+    <color name="pink_200">#DA1E37</color>
+    <color name="red_100">#E33E48</color> <!-- VERMELHO PRINCIPAL -->
+    <color name="red_200">#E63946</color>
+    <color name="red_300">#Ef233C</color>
+    <color name="red_400">#D90429</color>
+
+    <color name="yellow_001">#FFB703</color>
+    <color name="yellow_002">#FF9F1C</color>
+    <color name="orange_100">#F3A345</color> <!-- LARANJA PRINCIPAL -->
+    <color name="orange_200">#F9A03F</color>
+    <color name="orange_300">#E3972A</color>
+    <color name="orange_400">#DB9423</color>
+
+    <color name="blue_001">#3ABCD3</color>
+    <color name="lighting_blue">#6891C9</color> <!-- PRINCIPAL 3 -->
+    <color name="dark_blue02">#4058AE</color> <!-- PRINCIPAL 2 -->
+    <color name="bgcolorblue">#0084CA</color> <!-- PRINCIPAL 1 -->
+    <color name="blue_002">#0F4C5C</color>
+    <color name="dark_blue01">#1B3961</color> <!-- COR DA FONTE PRINCIPAL -->
     <color name="dark_blue">#1D3354</color>
+    <color name="dark_blue03">#011627</color> <!-- SOMBRA AZUL PRINCIPAL -->
+    <color name="dark_blue04">#001233</color>
 
-
-    <color name="green01">#7EB834</color>
+    <color name="green_01">#7EB834</color> <!-- PRINCIPAL 3 -->
+    <color name="green_03">#BCE984</color> <!-- PRINCIPAL 4 -->
+    <color name="green_05">#66EDD5</color> <!-- PRINCIPAL 6 -->
     <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_300">#1BC9B5</color> <!-- PRINCIPAL 2 -->
+    <color name="green_04">#1FC1A4</color> <!-- PRINCIPAL 5 -->
     <color name="teal_700">#FF018786</color>
+    <color name="teal_100">#00796B</color> <!-- PRINCIPAL 1 -->
+    <color name="teal_400">#013A34</color>
+    <color name="teal_500">#002521</color>
+
 </resources>

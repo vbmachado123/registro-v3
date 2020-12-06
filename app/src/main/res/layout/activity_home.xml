@@ -155,7 +155,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_add"
-        android:backgroundTint="@color/green01"
+        android:backgroundTint="@color/green_01"
         app:borderWidth="0dp"
         android:tint="@color/white"
         app:tint="@color/white"
