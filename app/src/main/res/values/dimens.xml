@@ -2,8 +2,11 @@
 <resources>
     <dimen name="tamanhoNomeLista">18sp</dimen>
     <dimen name="tamanhoEndereco">22sp</dimen>
+    <dimen name="tamanhoFooterCard">14sp</dimen>
     <dimen name="distancia_padrao">8dp</dimen>
     <dimen name="tamanhoTextoPadrao">16sp</dimen>
     <dimen name="tamanhoTextoDestaque">18sp</dimen>
-    <dimen name="radiuspadrao">20dp</dimen>
+    <dimen name="radiuspadrao">10dp</dimen>
+    <dimen name="radiustoolbar">10dp</dimen>
+    <dimen name="tamanhotoolbar">80dp</dimen>
 </resources>

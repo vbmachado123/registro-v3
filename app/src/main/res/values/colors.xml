@@ -8,6 +8,8 @@
     <color name="purple_100">#454AE9</color> <!-- PRINCIPAL 1 -->
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="color_text_hint">#B5B5B5</color>
+    <color name="bg_color_gray">#F5F3F3</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>

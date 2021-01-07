@@ -2,19 +2,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-        <item android:id="@+id/home"
+        <item android:id="@+id/item_home"
             android:title="Home"
             android:icon="@drawable/ic_home"
             android:color="@color/white"/>
-        <item android:id="@+id/form"
+        <item android:id="@+id/item_form"
             android:title="Formulário"
             android:color="@color/white"
             android:icon="@drawable/ic_form"/>
-        <item android:id="@+id/work"
+        <item android:id="@+id/item_servico"
             android:title="Serviço"
             android:color="@color/white"
             android:icon="@drawable/ic_work" />
-        <item android:id="@+id/profile"
+        <item android:id="@+id/item_perfil"
             android:title="Perfil"
             android:color="@color/white"
             android:icon="@drawable/ic_person" />

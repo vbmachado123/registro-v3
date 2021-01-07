@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="rectangle"
+            android:padding="@dimen/distancia_padrao">
+            <solid android:color="@color/bgcolorblue"/>
+            <corners
+                android:bottomLeftRadius="@dimen/radiustoolbar"
+                android:bottomRightRadius="@dimen/radiustoolbar">
+            </corners>
+        </shape>
+    </item>
+</selector>

@@ -1,8 +1,14 @@
 <resources>
-    <string name="app_name">registro</string>
+    <string name="app_name">Registro</string>
     <string name="txt_lista_home">Últimos Gerados</string>
     <string name="notificacaotxt">Nenhuma nova notificação</string>
     <string name="txtNomeList">Victor Balbino Machado</string>
     <string name="txtEnderecoList">Rua Dr Jacques Tupinamba</string>
-    <string name="txtUltimosGerados">Ultimos Gerados</string>
+    <string name="txtCategoria">Cadastro</string>
+    <string name="txtUltimosGerados">Últimos Gerados</string>
+    <string name="txtDataHoraGerado">21/12/2020 - 14h34</string>
+    <string name="txtEmail">seu_email@email.com</string>
+    <string name="txtSenha">***************</string>
+    <string name="esqueci_a_senha">Esqueci a Senha</string>
+    <string name="sem_conta">Nao tenho Conta</string>
 </resources>
