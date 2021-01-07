@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 @Entity
 @SuppressWarnings(RoomWarnings.PRIMARY_KEY_FROM_EMBEDDED_IS_DROPPED)
-public class UsuarioSistema implements Serializable {
+public class Usuario_Sistema implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
     private Long id;
@@ -22,11 +22,11 @@ public class UsuarioSistema implements Serializable {
     private String senha;
     private boolean master = false;
 
-    public UsuarioSistema() {
+    public Usuario_Sistema() {
     }
 
     @Ignore
-    public UsuarioSistema(Empresa empresa, String nome, String matricula, String usuario, String senha, boolean master) {
+    public Usuario_Sistema(Empresa empresa, String nome, String matricula, String usuario, String senha, boolean master) {
         this.empresa = empresa;
         this.nome = nome;
         this.matricula = matricula;
