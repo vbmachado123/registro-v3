@@ -4,18 +4,14 @@
 
         <item android:id="@+id/item_home"
             android:title="Home"
-            android:icon="@drawable/ic_home"
-            android:color="@color/white"/>
+            android:icon="@drawable/ic_home_outline" />
         <item android:id="@+id/item_form"
             android:title="Formulário"
-            android:color="@color/white"
-            android:icon="@drawable/ic_form"/>
+            android:icon="@drawable/ic_form_outline"/>
         <item android:id="@+id/item_servico"
             android:title="Serviço"
-            android:color="@color/white"
-            android:icon="@drawable/ic_work" />
+            android:icon="@drawable/ic_work_outline" />
         <item android:id="@+id/item_perfil"
             android:title="Perfil"
-            android:color="@color/white"
-            android:icon="@drawable/ic_person" />
+            android:icon="@drawable/ic_person_outline" />
 </menu>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_height="56dp"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llCategoriaLateral"
+            android:layout_height="56dp"
+            android:layout_width="9dp"
+            android:background="@drawable/item_lista_itinerario_lado"
+            tools:ignore="InvalidId"
+            android:orientation="vertical" />
+
+        <ImageView
+            android:layout_marginLeft="9dp"
+            android:padding="12dp"
+            android:id="@+id/ivCategoriaItem"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/item_imagem_itinerario"
+            android:src="@drawable/ic_check" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="56dp"
+            android:layout_width="300dp">
+
+            <TextView
+                android:layout_marginTop="8dp"
+                android:id="@+id/txtTituloServico"
+                android:textColor="@color/dark_blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Vistoria"
+                android:layout_marginLeft="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="6dp"
+                android:id="@+id/txtSubtituloServico"
+                android:textColor="@color/gray_et_top"
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:text="Vistoria Vistoria Vistoria"
+                android:layout_marginLeft="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <ImageView
+
+            android:id="@+id/ivDetalharItem"
+            android:src="@drawable/ic_arrow_right"
+            android:layout_height="56dp"
+            android:layout_marginLeft="8dp"
+            android:layout_width="wrap_content"/>
+
+    </TableRow>
+</RelativeLayout>

@@ -2,7 +2,7 @@ package br.com.registro.telas;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,31 +11,25 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.TableRow;
-import android.widget.TextView;
+import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import br.com.registro.R;
-import dao.Acao_RegraDAO;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+import util.BottomSheet;
+import util.IOnBackPressed;
 import util.Permissao;
 
 public class HomeActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     private BottomNavigationView bnv;
-    private Button ibPesquisa;
-    private EditText etFiltro;
-    private TableRow trNotificacao;
-    private TextView txtNomeEmpresa;
-    private TextView txtNomeColaborador;
-    private TextView txtMatricula;
-    private RecyclerView rvListagemHome;
+    private FrameLayout frameLayout;
+    private FloatingActionButton fab_add;
+    private Menu menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,32 +39,86 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         new Permissao().Permissoes(this);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
         WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         bnv = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
         bnv.setBackground(null);
-        bnv.setOnNavigationItemSelectedListener(this);
+        fab_add = (FloatingActionButton) findViewById(R.id.fab_add);
+        frameLayout = (FrameLayout) findViewById(R.id.frame_container);
+        bnv.setOnNavigationItemSelectedListener(navListener);
+        bnv.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_AUTO);
+        menu = bnv.getMenu();
+
+        alteraIcon(R.id.item_home, R.drawable.ic_home);
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.frame_container, new HomeFragment()).commit();
+
+        fab_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*Intent it = new Intent(HomeActivity.this, ItinerarioActivity.class);
+                startActivity(it);*/
+
+                BottomSheet bottomSheet = new BottomSheet();
+                bottomSheet.show(getSupportFragmentManager(), "TAG");
+            }
+        });
 
         validaCampo();
-
     }
 
     private void validaCampo() {
+    }
 
-        etFiltro = (EditText) findViewById(R.id.etFiltro);
-        ibPesquisa = (Button) findViewById(R.id.btnPesquisar);
-        txtNomeEmpresa = (TextView) findViewById(R.id.txtNomeEmpresa);
-        txtNomeColaborador = (TextView) findViewById(R.id.txtNomeColaborador);
-        txtMatricula = (TextView) findViewById(R.id.txtMatricula);
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-        rvListagemHome = (RecyclerView) findViewById(R.id.rvListagemHome);
+                    Fragment fragment = null;
 
-        ibPesquisa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                    switch (item.getItemId()) {
+                        case R.id.item_home:
+                            limparSelecao();
+                            alteraIcon(R.id.item_home, R.drawable.ic_home);
+                            fragment = new HomeFragment();
+                            break;
+                        case R.id.item_form:
+                            limparSelecao();
+                            menu.findItem(R.id.item_form).setIcon(R.drawable.ic_form);
+                            fragment = new ListaFragment("Modelos - Formulários");
+                            break;
+                        case R.id.item_servico:
+                            limparSelecao();
+                            menu.findItem(R.id.item_servico).setIcon(R.drawable.ic_work);
+                            fragment = new ListaFragment("Itinerários - Serviços");
+                            break;
+                        case R.id.item_perfil:
+                            limparSelecao();
+                            menu.findItem(R.id.item_perfil).setIcon(R.drawable.ic_person);
+                            fragment = new ListaFragment("Criar Equipe");
+                            break;
+                    }
 
-                String pesquisar = etFiltro.getText().toString();
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.frame_container, fragment).commit();
 
-            }
-        });
+                    return true;
+                }
+            };
+
+    private void alteraIcon(int item, int icone) {
+        limparSelecao();
+        menu.findItem(item).setIcon(icone);
+    }
+
+    private void limparSelecao() {
+
+        menu.findItem(R.id.item_home).setIcon(R.drawable.ic_home_outline);
+        menu.findItem(R.id.item_servico).setIcon(R.drawable.ic_work_outline);
+        menu.findItem(R.id.item_form).setIcon(R.drawable.ic_form_outline);
+        menu.findItem(R.id.item_perfil).setIcon(R.drawable.ic_person_outline);
+
     }
 
     @Override
@@ -83,6 +131,13 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.app_bar_menu, menu);
         return true;
+    }
+
+    @Override public void onBackPressed() {
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.frame_container);
+        if (!(fragment instanceof IOnBackPressed) || !((IOnBackPressed) fragment).onBackPressed()) {
+            super.onBackPressed();
+        }
     }
 
     @Override
@@ -99,22 +154,6 @@ public class HomeActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.item_home:
-
-                return true;
-            case R.id.item_form:
-                    Intent it = new Intent(HomeActivity.this, AssinaturaActivity.class);
-                    startActivity(it);
-                return true;
-            case R.id.item_servico:
-
-                return true;
-            case R.id.item_perfil:
-
-                return true;
-            default:
-                return false;
-        }
+        return false;
     }
 }

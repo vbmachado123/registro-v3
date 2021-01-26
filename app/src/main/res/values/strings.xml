@@ -11,4 +11,11 @@
     <string name="txtSenha">***************</string>
     <string name="esqueci_a_senha">Esqueci a Senha</string>
     <string name="sem_conta">Nao tenho Conta</string>
+    <string name="txtJaPossuoConta">Já Possuo Conta</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="txtFormularioAdd">Formulário</string>
+    <string name="txtServicoAdd">Serviço</string>
+    <string name="txtEquipeAdd">Equipe</string>
+    <string name="txtNome">Nome</string>
+    <string name="txtCodEmpresa">1 2 3 4</string>
 </resources>

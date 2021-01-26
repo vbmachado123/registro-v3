@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bgcolorblue"
+    tools:context=".telas.ListaFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:theme="@style/Theme.Registro"
+        app:titleTextColor="@android:color/white"
+        app:subtitleTextColor="@android:color/white"
+        style="@android:style/Holo.Light.ButtonBar"
+        android:outlineAmbientShadowColor="@android:color/white"
+        android:outlineSpotShadowColor="@android:color/white"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@drawable/toolbar_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:paddingRight="32dp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/txtTituloToolbar"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:layout_marginLeft="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingPrefix"
+            android:gravity="center_horizontal" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:background="@drawable/shape"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:padding="8dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/etFiltro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textSize="16dp"
+                            android:textColorHint="@color/color_text_hint"
+                            android:textColorHighlight="@color/bgcolorblue"
+                            android:textColorLink="@color/bgcolorblue"
+                            android:focusedByDefault="false"
+                            android:textStyle="bold"
+                            android:background="@android:color/transparent"
+                            android:outlineSpotShadowColor="@color/white"
+                            android:outlineAmbientShadowColor="@color/white"
+                            android:hint="Título, Grupo, Data"
+                            android:singleLine="true" />
+
+                        <Button
+                            android:id="@+id/btnPesquisar"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:background="@drawable/ic_search" />
+
+                    </FrameLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvListagemHome"
+                        android:scrollbars="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="600dp"/>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_marginBottom="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="10dp">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabSalvar"
+                app:fabSize="auto"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="58dp"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:borderWidth="0dp"
+                android:tint="@color/white"
+                app:tint="@color/white"
+                android:backgroundTint="@color/green_01"
+                app:srcCompat="@drawable/ic_save"
+                tools:ignore="VectorDrawableCompat" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

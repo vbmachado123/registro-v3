@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/style_item_lista"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="9dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:text="Grupo 1"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            fontPath="fonts/montserrat/Montserrat-Bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/txtTituloForm1"
+            android:text="Título Formulário 1"
+            android:textColor="@color/dark_blue"
+            android:textSize="14sp"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="14dp"
+            fontPath="fonts/montserrat/Montserrat-Bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/txtTituloForm2"
+            android:text="Título Formulário 2"
+            android:textColor="@color/dark_blue"
+            android:textSize="14sp"
+            android:layout_marginLeft="14dp"
+            fontPath="fonts/montserrat/Montserrat-Bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/txtTituloForm3"
+            android:text="Título Formulário 3"
+            android:textColor="@color/dark_blue"
+            android:textSize="14sp"
+            android:layout_marginLeft="14dp"
+            fontPath="fonts/montserrat/Montserrat-Bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingPrefix" />
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:background="@color/bg_color_gray"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"/>
+
+        <ImageView
+            android:src="@drawable/ic_more_horiz"
+            android:id="@+id/ivMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

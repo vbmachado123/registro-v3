@@ -31,7 +31,6 @@ public class AssinaturaActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         validaCampos();
-
     }
 
     private void validaCampos() {
@@ -57,5 +56,4 @@ public class AssinaturaActivity extends AppCompatActivity {
         inflater.inflate(R.menu.delete_menu, menu);
         return true;
     }
-
 }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_color_gray"
-    tools:context=".telas.LoginActivity">
+    tools:context=".telas.CadastroActivity">
 
     <ScrollView
         android:padding="@dimen/distancia_padraoLogin"
@@ -18,7 +18,6 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_marginTop="90dp"
                 android:src="@drawable/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="150sp">
@@ -32,7 +31,7 @@
 
                 <TextView
                     android:layout_marginLeft="32px"
-                    android:text="E-mail"
+                    android:text="Nome"
                     android:textColor="@color/gray_et_top"
                     android:textAlignment="textStart"
                     android:textSize="16sp"
@@ -41,7 +40,65 @@
                     android:gravity="start" />
 
                 <EditText
+                    android:hint="@string/txtNome"
+                    android:id="@+id/etCadastroNome"
+                    android:shadowColor="@color/bg_color_gray"
+                    android:shadowDx="1.2"
+                    android:shadowDy="1.2"
+                    android:shadowRadius="1.5"
+                    android:padding="8dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/edittext_login_style"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="32dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="E-mail"
+                    android:textColor="@color/gray_et_top"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="32px"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:gravity="start" />
+
+                <EditText
                     android:hint="@string/txtEmail"
+                    android:id="@+id/etCadastroEmail"
+                    android:inputType="textPassword"
+
+                    android:padding="8dp"
+                    android:shadowRadius="1.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/edittext_login_style"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="32dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginLeft="32px"
+                    android:text="Senha"
+                    android:textColor="@color/gray_et_top"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:gravity="start" />
+
+                <EditText
+                    android:hint="@string/txtSenha"
                     android:id="@+id/etLoginEmail"
                     android:shadowColor="@color/bg_color_gray"
                     android:shadowDx="1.2"
@@ -61,7 +118,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="Senha"
+                    android:text="Confirma Senha"
                     android:textColor="@color/gray_et_top"
                     android:textAlignment="textStart"
                     android:layout_marginLeft="32px"
@@ -72,9 +129,36 @@
 
                 <EditText
                     android:hint="@string/txtSenha"
-                    android:id="@+id/etLoginSenha"
+                    android:id="@+id/etCadastroConfirmaSenha"
                     android:inputType="textPassword"
+                    android:padding="8dp"
+                    android:shadowRadius="1.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/edittext_login_style"/>
+            </LinearLayout>
 
+
+            <LinearLayout
+                android:layout_marginTop="32dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Código Empresa"
+                    android:textColor="@color/gray_et_top"
+                    android:textAlignment="textStart"
+                    android:layout_marginLeft="32px"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:gravity="start" />
+
+                <EditText
+                    android:hint="@string/txtCodEmpresa"
+                    android:id="@+id/etCadastroCodEmpresa"
+                    android:inputType="number"
                     android:padding="8dp"
                     android:shadowRadius="1.5"
                     android:layout_width="match_parent"
@@ -83,8 +167,8 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnLogin"
-                android:text="fazer login"
+                android:id="@+id/btnCadastro"
+                android:text="fazer cadastro"
                 android:layout_marginTop="32dp"
                 android:background="@drawable/blue_button_style"
                 android:layout_width="match_parent"
@@ -96,11 +180,11 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/txtEsqueciASenha"
+                    android:id="@+id/txtJaPossuoConta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="start"
-                    android:text="@string/esqueci_a_senha"
+                    android:text="@string/txtJaPossuoConta"
                     android:textAlignment="textStart"
                     android:textColor="@color/dark_blue"
                     android:textSize="14dp"
@@ -110,23 +194,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />
-
-
-                <TextView
-                    android:id="@+id/txtNaotenhoConta"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="end"
-                    android:text="@string/sem_conta"
-                    android:textAlignment="textEnd"
-                    android:textColor="@color/dark_blue"
-                    android:textSize="14dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/txtEsqueciASenha"
-                    app:layout_constraintTop_toTopOf="parent" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -134,7 +201,6 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/txtVersao"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="V. 1.0.1 BETA"

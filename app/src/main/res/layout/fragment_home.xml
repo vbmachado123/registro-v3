@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgcolorblue"
+    android:layout_above="@+id/coordinator"
+    tools:context=".telas.HomeFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="@dimen/distancia_padrao"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/trNotificacao"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <ImageButton
+                    android:id="@+id/idNotificationIcon"
+                    android:foregroundGravity="center"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_notification"/>
+
+                <TextView
+                    android:padding="18px"
+                    android:layout_marginTop="8px"
+                    android:textSize="@dimen/tamanhoTextoPadrao"
+                    android:textColor="@color/bgcolor"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="64dp"
+                    android:text="@string/notificacaotxt"
+                    android:layout_height="wrap_content"
+                    tools:ignore="MissingPrefix" />
+
+                <ImageView
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_config"
+                    android:id="@+id/ivConfiguracao"
+                    android:layout_height="26dp"
+                    android:layout_width="26dp"/>
+            </TableRow>
+
+            <TextView
+                android:id="@+id/txtNomeColaborador"
+                android:padding="18px"
+                android:layout_marginTop="@dimen/distancia_padrao"
+                android:textSize="@dimen/tamanhoTextoDestaque"
+                android:textColor="@color/bgcolor"
+                android:layout_width="match_parent"
+                android:text="Victor Balbino Machado"
+                fontPath="fonts/montserrat/Montserrat-SemiBold.ttf"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingPrefix" />
+
+            <TextView
+                android:id="@+id/txtMatricula"
+                android:paddingLeft="16px"
+                android:paddingRight="16px"
+                android:layout_marginTop="@dimen/distancia_padrao"
+                android:textSize="@dimen/tamanhoTextoDestaque"
+                android:textStyle="italic"
+                android:textColor="@color/bgcolor"
+                android:layout_width="match_parent"
+                android:text="Mat. 12.516-914"
+                android:layout_height="wrap_content"
+                fontPath="fonts/montserrat/Montserrat-Light.ttf"
+                tools:ignore="MissingPrefix"/>
+
+            <TextView
+                android:id="@+id/txtNomeEmpresa"
+                android:paddingLeft="16px"
+                android:paddingRight="16px"
+                android:paddingBottom="16px"
+                android:layout_marginTop="8dp"
+                android:textSize="@dimen/tamanhoTextoDestaque"
+                android:textColor="@color/bgcolor"
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:text="VB Desenvolvimentos e Criações"
+                fontPath="fonts/montserrat/Montserrat-Light.ttf"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingPrefix" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@drawable/shape"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="600dp">
+
+                <FrameLayout
+                    android:padding="8dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/etFiltro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="16dp"
+                        android:textColorHint="@color/color_text_hint"
+                        android:textColorHighlight="@color/bgcolorblue"
+                        android:textColorLink="@color/bgcolorblue"
+                        android:focusedByDefault="false"
+                        android:textStyle="bold"
+                        android:background="@android:color/transparent"
+                        android:outlineSpotShadowColor="@color/white"
+                        android:outlineAmbientShadowColor="@color/white"
+                        android:hint="Últimos Gerados"
+                        android:singleLine="true" />
+
+                    <Button
+                        android:id="@+id/btnPesquisar"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/ic_search" />
+
+                </FrameLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvListagemHome"
+                    android:scrollbars="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>

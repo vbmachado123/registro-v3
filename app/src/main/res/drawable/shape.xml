@@ -14,8 +14,8 @@
     </padding>
 
     <corners
-        android:topLeftRadius="@dimen/radiuspadrao"
-        android:topRightRadius="@dimen/radiuspadrao">
+        android:topLeftRadius="@dimen/radiusHome"
+        android:topRightRadius="@dimen/radiusHome">
     </corners>
 
 </shape>

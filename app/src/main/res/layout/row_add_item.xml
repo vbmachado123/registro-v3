@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center_horizontal"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:theme="@style/AppBottomSheetDialogTheme"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="300dp">
+
+    <View
+        android:layout_width="130dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/color_text_hint" />
+
+    <LinearLayout
+        android:layout_marginTop="120dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <TableRow
+            android:gravity="center_horizontal"
+            android:id="@+id/trFormulario"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:tint="@color/bgcolorblue"
+                android:src="@drawable/ic_form"
+                android:layout_height="32dp"
+                android:layout_width="32dp"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_marginLeft="32dp"
+                android:textColor="@color/bgcolorblue"
+                fontPath="fonts/montserrat/Montserrat-Bold.ttf"
+                android:textSize="22sp"
+                android:text="@string/txtFormularioAdd"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                tools:ignore="MissingPrefix" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="@dimen/distancia_padrao_dialog"
+            android:id="@+id/trServico"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:tint="@color/bgcolorblue"
+                android:src="@drawable/ic_work"
+                android:layout_height="32dp"
+                android:layout_width="32dp"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_marginLeft="32dp"
+                android:textColor="@color/bgcolorblue"
+                fontPath="fonts/montserrat/Montserrat-Bold.ttf"
+                android:textSize="22sp"
+                android:text="@string/txtServicoAdd"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                tools:ignore="MissingPrefix" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_marginTop="@dimen/distancia_padrao_dialog"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/trEquipe"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+            <ImageView
+                android:tint="@color/bgcolorblue"
+                android:src="@drawable/ic_people"
+                android:layout_height="32dp"
+                android:layout_width="32dp"
+                tools:ignore="UseAppTint" />
+
+            <TextView
+                android:layout_marginLeft="32dp"
+                android:textColor="@color/bgcolorblue"
+                fontPath="fonts/montserrat/Montserrat-Bold.ttf"
+                android:textSize="22sp"
+                android:text="@string/txtEquipeAdd"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                tools:ignore="MissingPrefix" />
+        </TableRow>
+    </LinearLayout>
+
+</LinearLayout>

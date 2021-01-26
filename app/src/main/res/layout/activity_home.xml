@@ -3,126 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/bgcolorblue"
     android:layout_height="match_parent"
     tools:context=".telas.HomeActivity">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <FrameLayout
+        android:layout_above="@id/bottomNavigationView"
+        android:id="@+id/frame_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:padding="@dimen/distancia_padrao"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TableRow
-                android:id="@+id/trNotificacao"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent">
-
-                <ImageButton
-                    android:id="@+id/idNotificationIcon"
-                    android:foregroundGravity="center"
-                    android:background="@android:color/transparent"
-                    android:layout_gravity="center"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:src="@drawable/ic_notification"/>
-
-                <TextView
-                    android:padding="18px"
-                    android:layout_marginTop="8px"
-                    android:textSize="@dimen/tamanhoTextoPadrao"
-                    android:textColor="@color/bgcolor"
-                    android:layout_width="match_parent"
-                    android:text="@string/notificacaotxt"
-                    android:layout_height="wrap_content"
-                    tools:ignore="MissingPrefix" />
-            </TableRow>
-            <TextView
-                android:id="@+id/txtNomeEmpresa"
-                android:padding="18px"
-                android:layout_marginTop="@dimen/distancia_padrao"
-                android:textSize="@dimen/tamanhoTextoDestaque"
-                android:textColor="@color/bgcolor"
-                android:layout_width="match_parent"
-                android:textStyle="bold"
-                fontPath="fonts/montserrat/Montserrat-Bold.ttf"
-                android:text="VB Desenvolvimentos e Criações"
-                android:layout_height="wrap_content"
-                tools:ignore="MissingPrefix" />
-
-            <TextView
-                android:id="@+id/txtNomeColaborador"
-                android:padding="18px"
-                android:layout_marginTop="@dimen/distancia_padrao"
-                android:textSize="@dimen/tamanhoTextoDestaque"
-                android:textColor="@color/bgcolor"
-                android:layout_width="match_parent"
-                android:text="Victor Balbino Machado"
-                android:layout_height="wrap_content"
-                tools:ignore="MissingPrefix" />
-
-            <TextView
-                android:id="@+id/txtMatricula"
-                android:padding="18px"
-                android:layout_marginTop="@dimen/distancia_padrao"
-                android:textSize="@dimen/tamanhoTextoDestaque"
-                android:textStyle="italic"
-                android:textColor="@color/bgcolor"
-                android:layout_width="match_parent"
-                android:text="Mat. 12.516-914"
-                android:layout_height="wrap_content"
-                fontPath="fonts/montserrat/Montserrat-LightItalic.ttf"
-                tools:ignore="MissingPrefix"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:background="@drawable/shape"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="800dp">
-
-            <FrameLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/etFiltro"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
-                    android:textSize="16dp"
-                    android:textColorHint="@color/color_text_hint"
-                    android:textColorHighlight="@color/bgcolorblue"
-                    android:textColorLink="@color/bgcolorblue"
-                    android:textStyle="bold"
-                    android:hint="Últimos Gerados"
-                    android:singleLine="true" />
-
-                <Button
-                    android:id="@+id/btnPesquisar"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_gravity="right|center_vertical"
-                    android:background="@drawable/ic_search" />
-
-            </FrameLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvListagemHome"
-                android:scrollbars="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </LinearLayout>
-    </LinearLayout>
-
+        android:layout_height="wrap_content"
+        tools:ignore="NotSibling" />
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -150,12 +42,12 @@
         android:id="@+id/fab_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_add"
         android:backgroundTint="@color/green_01"
+        android:src="@drawable/ic_add"
         android:tint="@color/white"
-        app:tint="@color/white"
-        app:layout_anchor="@id/bottomBar"/>
+        app:layout_anchor="@+id/bottomBar"
+        app:layout_anchorGravity="top|center"
+        app:tint="@color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
 </RelativeLayout>
